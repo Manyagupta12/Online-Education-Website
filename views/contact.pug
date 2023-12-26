@@ -1,0 +1,32 @@
+extends base.pug
+
+block scripts  
+   script(src="/static/index.js")
+
+block style 
+    style 
+      include ../static/style.css    
+    
+
+block content 
+    nav#navbar
+      ul
+        div#logo
+           img(src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D")
+        li #[a(href='/') Home]
+        li #[a(href='/About') About]
+        li #[a(href='/Courses') Courses]
+        li #[a(href='/Contact') Contact] 
+
+    h1 Contact us  
+    form(action="/contact", method="post" )   
+         input(type="text", class="myInput", name="name" placeholder="Enter your name")
+         input(type="number", class="myInput", name="number" placeholder="Enter your number")
+         input(type="email", class="myInput", name="email" placeholder="Enter your email email")
+         input(type="text", class="myInput", name="address" placeholder="Enter your address")
+         input(type="text", class="myInput", name="desc" placeholder="Enter your course name")
+         button(class="btn")
+            | Submit
+
+    footer#foo
+        | Copywrite@ manyaonlineeducation123.com | All rights reserved 

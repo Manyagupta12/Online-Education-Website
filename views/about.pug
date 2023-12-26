@@ -1,0 +1,56 @@
+extends base.pug
+
+block scripts  
+   script(src="/static/index.js")
+
+block style 
+    style 
+      include ../static/style.css 
+
+block content 
+    nav#navbar
+      ul
+        div#logo
+           img(src="https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D")
+        li #[a(href='/') Home]
+        li #[a(href='/About') About]
+        li #[a(href='/Courses') Courses]
+        li #[a(href='/Contact') Contact] 
+
+    
+    section#missionSection
+       h2 About
+
+       div.card
+           div.cardbox
+            div.card-img
+               //- img(src="data:image/png;base64,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")
+               h3 Bio
+
+               div.card-content
+                 p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aspernatur.
+                  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, corporis deleniti facilis nam aut, excepturi ipsam atque nostrum dolor suscipit a doloremque, ea numquam. Aliquid quis ad adipisci assumenda velit!
+       div.card
+           div.cardbox
+            div.card-img
+               //- img(src="data:image/png;base64,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")
+               h3 Education
+                
+               div.card-content
+                h4 Bachelor's Degree in Education
+                  p Aug 1994 - May 1998
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid iste velit excepturi suscipit totam minima.
+
+       div.card
+            div.cardbox
+            div.card-img
+               //- img(src="data:image/png;base64,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")
+               h3 Master's
+               
+               div.card-content
+                h4 Master's Degree in Social Studies
+                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus expedita, recusandae quod reprehenderit itaque voluptas!
+
+       
+       footer#foot
+        | Copywrite@ manyaonlineeducation123.com | All rights reserved   
